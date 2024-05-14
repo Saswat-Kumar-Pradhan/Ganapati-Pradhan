@@ -4,6 +4,9 @@ body{
     color: white !important; */
     overflow-x: hidden;
 }
+a{
+    text-decoration: none !important;
+}
 header{
     padding: 12px 20px;
     box-shadow: 2px 2px 20px rgb(150, 150, 150);
@@ -17,7 +20,6 @@ header{
     }
     a{
         color: black;
-        text-decoration: none;
         margin: auto 15px;
         font-weight: bold;
     }
@@ -44,20 +46,25 @@ header{
 }
 .box-1-desc{
     margin-left: 80px;
+    color: black;
     h1{
         font-weight: bold;
     }
 }
 .box2{
-    background-color: blue;
     margin: 15px 5px;
     width: 80%;
     aspect-ratio: 0.8;
     border-radius: 10px;
     background-size: cover;
+    transition: all 0.2s;
+}
+.box2:hover{
+    transform: translateY(-10px);
+    scale: 1.05;
 }
 .ssongs-container .col-6:nth-child(1) .box2{
-    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.jpg);
+    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.png);
 }
 .ssongs-container .col-6:nth-child(2) .box2{
     background-image: url(images/nada\ achara.png);
