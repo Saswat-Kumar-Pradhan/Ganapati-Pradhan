@@ -1,0 +1,182 @@
+body{
+    font-family: Arial, Helvetica, sans-serif !important;
+    /* background-color: black !important;
+    color: white !important; */
+    overflow-x: hidden;
+}
+header{
+    padding: 12px 20px;
+    box-shadow: 2px 2px 20px rgb(150, 150, 150);
+
+    h3{
+        color: royalblue;
+        font-weight: bolder;
+    }
+    .links{
+        margin-top: 7px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+        margin: auto 15px;
+        font-weight: bold;
+    }
+    a:hover{
+        color: royalblue;
+    }
+    .active{
+        color: royalblue;
+    }
+}
+.ssongs{
+    font-weight: bolder;
+    margin: 50px auto 20px 40px;
+}
+.ssongs-container{
+    padding-right: 50px;
+}
+.box1{
+    background-image: url(images/hanuman.jpg);
+    background-size: cover;
+    margin: 50px 50px 20px 80px;
+    aspect-ratio: 2.0;
+    border-radius: 10px;
+}
+.box-1-desc{
+    margin-left: 80px;
+    h1{
+        font-weight: bold;
+    }
+}
+.box2{
+    background-color: blue;
+    margin: 15px 5px;
+    width: 80%;
+    aspect-ratio: 0.8;
+    border-radius: 10px;
+    background-size: cover;
+}
+.ssongs-container .col-6:nth-child(1) .box2{
+    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.jpg);
+}
+.ssongs-container .col-6:nth-child(2) .box2{
+    background-image: url(images/nada\ achara.png);
+}
+.ssongs-container .col-6:nth-child(3) .box2{
+    background-image: url(images/urea\ nada.png);
+}
+.ssongs-container .col-6:nth-child(4) .box2{
+    background-image: url(images/nada\ achara.png);
+}
+.blog-heading{
+    font-weight: bold;
+    margin: 80px auto auto 80px;
+}
+.blog-container{
+    padding: 50px 80px;
+}
+iframe{
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1.77;
+}
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 10px 25px;
+    margin-bottom: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+  }
+  /* 5 */
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255,27,0);
+  }
+  .btn-5:hover {
+    color: #f0094a;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+
+@media (max-width: 768px) {
+    header{ 
+        padding: 12px 10px;   
+        h3{
+            color: royalblue;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 30px;
+        }
+        .links{
+            margin-top: 7px
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            margin: auto 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+    .box1{
+        margin: 40px 20px 20px;
+    }
+    .box-1-desc{
+        margin-left: 20px;
+    }
+    .ssongs{
+        margin: 50px auto 20px 20px;
+    }
+    .ssongs-container{
+        padding-right: 0px;
+    }
+    .box2{
+        margin: 10px 5px;
+        width: 85%;
+    }
+    .blog-heading{
+        margin: 80px auto auto 20px;
+    }
+    .blog-container{
+        padding: 50px 20px;
+    }
+}
