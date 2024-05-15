@@ -14,7 +14,13 @@ a{
 header{
     padding: 12px 20px;
     box-shadow: 2px 2px 20px rgb(150, 150, 150);
-
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7); /* Adjust background for better visibility */
+    backdrop-filter: blur(15px); /* Adds the blur effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
     h3{
         color: royalblue;
         font-weight: bolder;
@@ -34,6 +40,9 @@ header{
         color: royalblue;
     }
 }
+.top-section{
+    margin-top: 65px !important;
+}
 .ssongs{
     font-weight: bolder;
     margin: 50px auto 20px 40px;
@@ -45,7 +54,7 @@ header{
     background-image: url(images/hanuman.jpg);
     background-size: cover;
     margin: 50px 50px 20px 80px;
-    aspect-ratio: 2.0;
+    aspect-ratio: 1.9;
     border-radius: 10px;
 }
 .box-1-desc{
@@ -84,12 +93,16 @@ header{
     margin: 60px auto auto 80px;
 }
 .blog-container{
-    padding: 50px 80px;
+    padding: 50px 80px 20px;
+    h5{
+        font-weight: bold !important;
+    }
 }
 iframe{
     border-radius: 10px;
     width: 100%;
     aspect-ratio: 1.77;
+    margin-bottom: 10px;
 }
 .custom-btn {
     width: 130px;
@@ -146,7 +159,10 @@ iframe{
     width:100%;
     transition:800ms ease all;
   }
-  
+  .copyright{
+    margin: auto 10px 15px;
+    text-align: right;
+  }
 
 @media (max-width: 768px) {
     header{ 
@@ -170,6 +186,9 @@ iframe{
             font-weight: bold;
         }
     }
+    .top-section{
+        margin-top: 200px !important;
+    }
     .box1{
         margin: 40px 20px 20px;
     }
@@ -191,6 +210,9 @@ iframe{
         margin: 80px auto auto 20px;
     }
     .blog-container{
-        padding: 50px 20px;
+        padding: 50px 20px 10px;
+    }
+    iframe{
+        margin-bottom: 5px;
     }
 }
