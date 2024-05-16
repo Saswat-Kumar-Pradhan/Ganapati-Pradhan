@@ -78,7 +78,7 @@ header{
     scale: 1.05;
 }
 .ssongs-container .col-6:nth-child(1) .box2{
-    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.png);
+    background-image: url(images/khaiba_agaru.png);
 }
 .ssongs-container .col-6:nth-child(2) .box2{
     background-image: url(images/nada\ achara.png);
@@ -87,7 +87,7 @@ header{
     background-image: url(images/urea\ nada.png);
 }
 .ssongs-container .col-6:nth-child(4) .box2{
-    background-image: url(images/nada\ achara.png);
+    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.png);
 }
 .blog-heading{
     font-weight: bold;
@@ -189,6 +189,38 @@ iframe{
     }
   }
 
+  /* profile */
+  .profile{
+    text-align: center;
+    margin-top: 150px;
+    img{
+        width: 200px;
+        border-radius: 50%;
+    }
+    h2{
+        font-weight: bold;
+        color: royalblue;
+        margin: 30px auto 5px;
+    }
+    .links{
+        justify-content: center;
+    }
+    .link1{
+        color: white;
+        border-radius: 20px;
+        width: 150px;
+        margin: 10px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    h5{
+        margin: 30px auto 15px;
+    }
+    .fa-solid, .fa-brands, .fas {
+        margin-top: 4px;
+    }
+  }
+
 @media (max-width: 768px) {
     header{ 
         padding: 12px 10px;   
@@ -249,4 +281,9 @@ iframe{
             margin-top: 30px;
         }
       }
+      .profile .links{
+        flex-direction: column;
+        align-items: center; /* Centers items vertically */
+        justify-content: center;
+    }
 }
