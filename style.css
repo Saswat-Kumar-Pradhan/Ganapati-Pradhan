@@ -52,7 +52,7 @@ header{
     padding-right: 50px;
 }
 .box1{
-    background-image: url(images/hanuman.jpg);
+    background-image: url(images/hanuman\ chalisa\ banner.png);
     background-size: cover;
     margin: 50px 50px 20px 80px;
     aspect-ratio: 1.9;
@@ -214,7 +214,7 @@ iframe{
         justify-content: space-evenly;
     }
     h5{
-        margin: 30px auto 15px;
+        margin: 30px auto 10px;
     }
     .fa-solid, .fa-brands, .fas {
         margin-top: 4px;
@@ -285,5 +285,8 @@ iframe{
         flex-direction: column;
         align-items: center; /* Centers items vertically */
         justify-content: center;
+    }
+    .profile{
+        margin-top: 140px;
     }
 }
