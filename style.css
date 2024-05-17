@@ -29,7 +29,7 @@ header{
     .links{
         margin-top: 7px;
     }
-    a{
+    .links a{
         color: black;
         margin: auto 15px;
         font-weight: bold;
@@ -37,8 +37,8 @@ header{
     a:hover{
         color: royalblue;
     }
-    .active{
-        color: royalblue;
+    .links .active{
+        color: royalblue !important;
     }
 }
 .top-section{
@@ -206,7 +206,6 @@ iframe{
         justify-content: center;
     }
     .link1{
-        color: white;
         border-radius: 20px;
         width: 150px;
         margin: 10px;
@@ -235,7 +234,7 @@ iframe{
             display: flex;
             justify-content: space-evenly;
         }
-        a{
+        .links a{
             color: black;
             text-decoration: none;
             margin: auto 10px;
