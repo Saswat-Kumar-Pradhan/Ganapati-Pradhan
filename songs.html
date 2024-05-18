@@ -12,12 +12,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> -->
 </head>
 
 <body>
     <header class="row">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <a href="./contact.html"><h3>Ganapati Pradhan</h3></a>
+            <a href="./contact.html">
+                <h3>Ganapati Pradhan</h3>
+            </a>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-end align-middle">
             <div class="links">
@@ -61,7 +65,8 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./images/song_gai_paliba_kahinki.jpg"><img src="./images/gai_palibaa_kahinki.jpg" alt=""></a>
+                    <a href="./images/song_gai_paliba_kahinki.jpg"><img src="./images/gai_palibaa_kahinki.jpg"
+                            alt=""></a>
                 </div>
             </div>
         </div>
@@ -70,23 +75,43 @@
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./commingsoon.html"><img src="./images/ame_sabu_kuni....png" alt=""></a>
+                    <a href="./commingsoon.html" class="protected-link"><img src="./images/ame_sabu_kuni....png"
+                            alt=""></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./commingsoon.html"><img src="./images/paika_neta.jpg" alt=""></a>
+                    <a href="./commingsoon.html" class="protected-link"><img src="./images/paika_neta.jpg" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./commingsoon.html"><img src="./images/bharat_mata_ki_jay.png" alt=""></a>
+                    <a href="./commingsoon.html" class="protected-link"><img src="./images/bharat_mata_ki_jay.png"
+                            alt=""></a>
                 </div>
             </div>
         </div>
     </section>
     <br><br><br>
     <div class="copyright">&copy; Ganapati Pradhan</div>
+
+    <!-- Password Modal -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h3 class="modal-title text-center" id="passwordModalLabel">Enter Password</h3><br>
+                    <input type="password" id="password-input" class="form-control" placeholder="Password">
+                    <div class="popup">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="submit-password">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const boxes = document.querySelectorAll('.box3');
@@ -97,6 +122,34 @@
                     sound.currentTime = 0; // Rewind to the start
                     sound.play();
                 });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var protectedLinks = document.querySelectorAll('.protected-link');
+            var targetHref = '';
+
+            protectedLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default action
+                    targetHref = link.getAttribute('href'); // Store the target URL
+                    $('#passwordModal').modal('show'); // Show the modal
+                });
+            });
+
+            document.getElementById('submit-password').addEventListener('click', function () {
+                var password = document.getElementById('password-input').value;
+                var correctPassword = '456789'; // Replace 'your_password' with the correct password
+
+                if (password === correctPassword) {
+                    window.location.href = targetHref; // Redirect to the stored URL
+                } else {
+                    alert('Incorrect password');
+                }
+            });
+            document.getElementById('close-modal').addEventListener('click', function () {
+                $('#passwordModal').modal('hide');
             });
         });
     </script>
