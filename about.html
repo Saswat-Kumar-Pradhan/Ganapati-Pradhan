@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-Ganapati</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .timeline-container {
+            width: 80%;
+            padding: 10px 0 50px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -1px;
+            width: 2px;
+            height: 100%;
+            background: #FFDD00;
+            z-index: 1
+        }
+
+        .timeline-block {
+            width: -webkit-calc(50% + 8px);
+            width: -moz-calc(50% + 8px);
+            width: calc(50% + 8px);
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -moz-box-pack: justify;
+            justify-content: space-between;
+            clear: both;
+        }
+
+        .timeline-block-right {
+            float: right;
+        }
+
+        .timeline-block-left {
+            float: left;
+            direction: rtl
+        }
+
+        .marker {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid #FFDD00;
+            background: #FFDD00;
+            margin-top: 10px;
+            z-index: 9999
+        }
+
+        .timeline-content {
+            width: 95%;
+            padding: 0 15px;
+            color: #666
+        }
+
+        .timeline-content h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+
+        .timeline-content span {
+            font-size: 15px;
+            color: #a4a4a4;
+        }
+
+        .timeline-content p {
+            font-size: 14px;
+            line-height: 1.5em;
+            word-spacing: 1px;
+            color: #888;
+            margin-top: 15px;
+        }
+        .instructions{
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            img{
+                height: 10vw;
+            }
+        }
+        .instructions2 {
+            text-align: center;
+            img{
+                width: 80%;
+            }
+        }
+
+
+
+        @media screen and (max-width: 768px) {
+            .timeline-container:before {
+                left: 8px;
+                width: 2px;
+            }
+
+            .timeline-block {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .timeline-block-right {
+                float: none;
+            }
+
+            .timeline-block-left {
+                float: none;
+                direction: ltr;
+            }
+            .instructions{
+            justify-content: center;
+            margin-top: 30px;
+                img{
+                    height: 90px;
+                }
+            }
+            .instructions2 {
+                margin-top: 30px;
+                img{
+                    width: 95%;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <a href="./contact.html">
+                <a href="./contact.html" id="touchElement"><h3>Ganapati Pradhan</h3></a>
+            </a>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-end align-middle">
+            <div class="links">
+                <a href="./index.html">Home</a>
+                <a href="./ebooks.html">E-Books</a>
+                <a href="./songs.html">Songs</a>
+                <a href="./blogs.html">Blogs</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <section class="version">
+        <br><br><br>
+        <h2>Instructions</h2>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 instructions">
+                <img src="./images/macbook-pro.png" alt="">
+                <img src="./images/iphone-15.png" alt="">
+                <img src="./images/ipad.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 instructions2">
+                <img src="./images/menubar.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="version">
+        <h2>Version History</h2>
+        <div class="timeline-container">
+            <!-- <div class="timeline-block timeline-block-right">
+                <div class="marker">
+                </div>
+                <div class="timeline-content">
+                    <h3 style="color: green;">0.40 (beta)</h3>
+                    <b>17th May 2024</b>
+                    <p>Project starts and Mason Street detour begins fsjagh jasdf glsjkdfglksjdfg lkjsfd
+                        sflkgjhdflkjhsldkfj lkjsdgh lkjshdfglkj sdfkj lskjdfglkjsd lkjsdfh ghsdlfkjgsld kjflksjdfhg
+                        lksjdfhgl kjshdfg lkjshdflkjghs dlkfjgl skdjfhg lk glkjsdfhg lskdjfh glkj h</p>
+                </div>
+            </div> -->
+            <div class="timeline-block timeline-block-left">
+                <div class="marker">
+                </div>
+                <div class="timeline-content">
+                    <h3 style="color: red;">0.30 (beta)</h3>
+                    <b>23rd May 2024</b>
+                    <p> Introducing new features that enhance user experience and provide greater functionality. <br>
+                        New Features: <br> 1. Version History Page. <br> &nbsp;&nbsp;&nbsp; (A dedicated version history
+                        page has been added, allowing users to view the progression and changes made in each version of
+                        the website. This transparency helps users stay informed about new features, enhancements, and
+                        bug fixes.) <br> 2. Personal Private Section. <br> &nbsp;&nbsp;&nbsp; (We have introduced a
+                        personal private section that is accessible only to the account owner. This section can be used
+                        to store private notes, drafts, or other personal content, offering users a secure and private
+                        space for their own use.)</p>
+                </div>
+            </div>
+            <div class="timeline-block timeline-block-right">
+                <div class="marker">
+                </div>
+                <div class="timeline-content">
+                    <h3 style="color: royalblue;">0.20 (beta)</h3>
+                    <b>19th May 2024</b>
+                    <p>This update focuses on enhancing security and improving user interaction capabilities. <br> New
+                        Features: <br> 1. Password Protection for Patriotic Songs. <br> &nbsp;&nbsp;&nbsp; (To ensure
+                        the exclusivity and security of our content, we have added password protection for accessing the
+                        songs.) <br> 2. Contact Details Section. <br> &nbsp;&nbsp;&nbsp; (We have introduced a new
+                        contact section on the site, making it easier for users to get in touch. you can now reach out
+                        directly through our newly added contact form.)</p>
+                </div>
+            </div>
+            <div class="timeline-block timeline-block-left">
+                <div class="marker">
+                </div>
+                <div class="timeline-content">
+                    <h3 style="color: purple;">0.10 (beta)</h3>
+                    <b>16th May 2024</b>
+                    <p>We are excited to announce the beta release of our website, version 0.10! This platform is
+                        dedicated to showcasing and celebrating the unique creations of Ganapati Pradhan including
+                        ebooks, songs of him and more. This initial release is designed to give users a sneak peek into
+                        the rich and diverse content available, and to gather valuable feedback for future improvements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">&copy; Ganapati Pradhan</div>
+    <script src="./touchAndHold.js"></script>
+</body>
+
+</html>

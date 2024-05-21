@@ -252,6 +252,11 @@ iframe {
         margin: 30px 10px 5px;
     }
 }
+.version h2{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 40px;
+}
 @keyframes sheading {
     0% {
         opacity: 0;
@@ -275,6 +280,17 @@ iframe {
 }
 
 /* profile */
+.info{
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    color: rgb(124, 124, 124);
+    font-size: 30px;
+    transition: all 0.2s;
+}
+.info:hover{
+    transform: scale(1.15);
+}
 .profile {
     text-align: center;
     margin-top: 150px;
@@ -372,6 +388,23 @@ iframe {
     100% {}
 }
 
+/* personal */
+
+.personal-security{
+    text-align: center;
+    img{
+        width: 200px;
+        margin: 150px auto 20px;
+    }
+    button{
+        width: 100px;
+        margin-top: 30px;
+    }
+    #password-input{
+        width: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 12px 10px;
@@ -456,5 +489,26 @@ iframe {
 
     .profile {
         margin-top: 140px;
+    }
+    .info{
+        top: 110px;
+        font-size: 25px;
+    }
+    .version h2{
+        margin-top: 60px;
+    }
+    .personal-security{
+        text-align: center;
+        img{
+            width: 200px;
+            margin: 200px auto 20px;
+        }
+        button{
+            width: 100px;
+            margin-top: 30px;
+        }
+        #password-input{
+            width: 80%;        
+        }
     }
 }
