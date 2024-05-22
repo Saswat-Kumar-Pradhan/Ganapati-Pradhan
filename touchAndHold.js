@@ -2,6 +2,7 @@ const touchElement = document.getElementById('touchElement');
 let touchTimer;
 
 touchElement.addEventListener('touchstart', function (event) {
+    event.preventDefault(); // Prevent the context menu from appearing
     touchTimer = setTimeout(() => {
         window.location.href = './personal.html'; // Replace with your target URL
     }, 2000); // Hold duration (in milliseconds)
