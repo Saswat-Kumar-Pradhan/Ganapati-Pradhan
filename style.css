@@ -199,6 +199,12 @@ iframe {
     text-align: right;
     color: gray;
 }
+.infomark{
+    
+    margin: auto 10px 15px 20px;
+    text-align: right;
+    color: gray;
+}
 
 /* songs */
 .awareness-song {

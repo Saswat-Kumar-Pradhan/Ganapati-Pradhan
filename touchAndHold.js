@@ -2,10 +2,10 @@ const touchElement = document.getElementById('touchElement');
 let touchTimer;
 
 touchElement.addEventListener('touchstart', function (event) {
-    event.preventDefault(); // Prevent the context menu from appearing
+    event.preventDefault();
     touchTimer = setTimeout(() => {
-        window.location.href = './personal.html'; // Replace with your target URL
-    }, 2000); // Hold duration (in milliseconds)
+        window.location.href = './personal.html';
+    }, 2000);
 });
 
 touchElement.addEventListener('touchend', function (event) {
@@ -16,11 +16,11 @@ touchElement.addEventListener('touchmove', function (event) {
     clearTimeout(touchTimer);
 });
 
-// For mouse support (optional)
+// For mouse support
 touchElement.addEventListener('mousedown', function (event) {
     touchTimer = setTimeout(() => {
-        window.location.href = './personal.html'; // Replace with your target URL
-    }, 2000); // Hold duration (in milliseconds)
+        window.location.href = './personal.html';
+    }, 2000);
 });
 
 touchElement.addEventListener('mouseup', function (event) {
