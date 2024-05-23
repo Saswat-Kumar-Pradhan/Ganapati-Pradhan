@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.thumbnail{
+    text-align: center;
+    img{
+        width: 250px;
+        margin: 70px auto 30px;
+        border-radius: 10px;
+        box-shadow: 8px 2px 30px rgb(105, 105, 105);
+    }
+}
+.heading{
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 15px 0px;
+    /* background-image: linear-gradient(to bottom, transparent, white, white); */
+    background: rgba(255, 255, 255, 0.7);
+    /* Adjust background for better visibility */
+    backdrop-filter: blur(15px);
+    /* Adds the blur effect */
+    -webkit-backdrop-filter: blur(15px);
+    h2{
+        margin: 0;
+    }
+    p{
+        margin: 10px 0 0;
+        color: gray;
+    }
+}
+.content{
+    padding: 70px 20px 20px;
+    /* text-align: justify; */
+}
+.accordion-body, .accordion-button{
+    font-weight: bold;
+}
