@@ -418,9 +418,13 @@ iframe {
     }
     p{
         color: rgb(164, 164, 164);
+        font-size: smaller;
     }
     .book{
         padding: 0px 100px;
+        a{
+            width: 120px;
+        }
     }
 }
 
