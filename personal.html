@@ -126,22 +126,21 @@
             </div>
         </div>
     </header>
-    <!-- <section>
+    <section>
         <div class="personal-security">
             <img src="./images/lock.gif" alt="">
             <h3 class="modal-title text-center" id="passwordModalLabel">Enter Security Key</h3><br>
             <center><input type="password" id="password-input" class="form-control" placeholder="key"></center>
-            <button class="btn btn-primary">Enter</button>
+            <button class="btn btn-primary" id="enter-button">Enter</button>
         </div>
-    </section> -->
-    <section class="collections row">
+    </section>
+    <section class="collections row" style="display: none;">
         <div class="book col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="d-flex justify-content-between">
-                <div>
-                    <h2>Bhagabat Gita</h2>
+                <div class="desc">
+                    <h2>Srimad Bhagabad Gita</h2>
                     <p>It is an ancient Hindu scripture that is part of the epic poem Mahabharata.</p>
-                    <a href="./ebooks/gita.html" class="btn btn-warning">Read</a>
-                    
+                    <a href="./ebooks/gita.html" class="btn btn-warning">Read</a> 
                 </div>
                 <div>
                     <div class="book-items">
@@ -164,7 +163,7 @@
                 <div>
                     <h2>Rama Rakhya Stotram</h2>
                     <p>It focuses on all parts of the body and invokes Lord Ram to protect them.</p>
-                    <a href="./ebooks/ramaRakhyaStotra.html" class="btn btn-primary">Read</a>
+                    <a href="./ebooks/ramaRakhyaStotra.html" class="btn" style="background-color: #078fc7;color: white;">Read</a>
                 </div>
                 <div>
                     <div class="book-items">
@@ -187,7 +186,7 @@
                 <div>
                     <h2>Manabasa Laxmipurana</h2>
                     <p>Upholding Equality and Love Transcends Caste Divisions in World.</p>
-                    <a href="./ebooks/manabasa_laxmi_purana.html" class="btn btn-primary">Read</a>
+                    <a href="./ebooks/manabasa_laxmi_purana.html" class="btn btn-danger" style="background-color: #ff4d3b;">Read</a>
                 </div>
                 <div>
                     <div class="book-items">
@@ -210,7 +209,7 @@
                 <div>
                     <h2>Chhamana Athaguntha</h2>
                     <p>a tale of wealth and greed, of property and theft.</p>
-                    <a href="./ebooks/chhaManaAthaGuntha.html" class="btn btn-danger">Read</a>
+                    <a href="./ebooks/chhaManaAthaGuntha.html" class="btn btn-warning" style="background-color: #daa75b;">Read</a>
                     
                 </div>
                 <div>
@@ -230,5 +229,18 @@
             </div>
         </div>
     </section>
+    <script>
+        document.getElementById('enter-button').addEventListener('click', function() {
+    const passwordInput = document.getElementById('password-input').value;
+    const correctPassword = '12345678';
+
+    if (passwordInput === correctPassword) {
+        document.querySelector('.collections').style.display = 'flex';
+        document.querySelector('.personal-security').style.display = 'none';
+    } else {
+        alert('Incorrect password. Please try again.');
+    }
+});
+    </script>
 </body>
 </html>
