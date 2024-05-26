@@ -140,12 +140,14 @@
 
             document.getElementById('submit-password').addEventListener('click', function () {
                 var password = document.getElementById('password-input').value;
-                var correctPassword = '123456'; // Replace 'your_password' with the correct password
+                var correctPassword = '123456';
 
                 if (password === correctPassword) {
-                    window.location.href = targetHref; // Redirect to the stored URL
+                    document.getElementById('password-input').value = '';
+                    window.location.href = targetHref;
                 } else {
                     alert('Incorrect password');
+                    document.getElementById('password-input').value = '';
                 }
             });
             document.getElementById('close-modal').addEventListener('click', function () {

@@ -32,6 +32,7 @@ body{
 .content{
     padding: 70px 20px 20px;
     /* text-align: justify; */
+    font-weight: bold;
 }
 .accordion-body, .accordion-button{
     font-weight: bold;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,104 +12,100 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <style>
+    <style>
+        .book-items {
+            position: relative;
+            cursor: default;
+            padding: 16px 6px;
+            margin: 0;
+            display: grid;
+            break-inside: avoid;
+            width: 140px;
+        }
 
-.book-items {
-  position: relative;
-  cursor: default;
-  padding: 16px 6px;
-  margin: 0;
-  display: grid;
-  break-inside: avoid;
-  width: 140px;
-}
+        .main-book-wrap {
+            position: relative;
+        }
 
-.main-book-wrap {
-  position: relative;
-}
+        .book-cover {
+            position: relative;
+        }
 
-.book-cover {
-  position: relative;
-}
+        .book-cover .book-inside {
+            position: absolute;
+            width: 90%;
+            height: 96%;
+            top: 1%;
+            left: 16px;
+            border: 1px solid grey;
+            border-radius: 2px 6px 6px 2px;
+            background: white;
+            box-shadow: 10px 40px 40px -10px #00000030, inset -2px 0 0 grey,
+                inset -3px 0 0 #dbdbdb, inset -4px 0 0 white, inset -5px 0 0 #dbdbdb,
+                inset -6px 0 0 white, inset -7px 0 0 #dbdbdb, inset -8px 0 0 white,
+                inset -9px 0 0 #dbdbdb;
+        }
 
-.book-cover .book-inside {
-  position: absolute;
-  width: 90%;
-  height: 96%;
-  top: 1%;
-  left: 16px;
-  border: 1px solid grey;
-  border-radius: 2px 6px 6px 2px;
-  background: white;
-  box-shadow: 10px 40px 40px -10px #00000030, inset -2px 0 0 grey,
-    inset -3px 0 0 #dbdbdb, inset -4px 0 0 white, inset -5px 0 0 #dbdbdb,
-    inset -6px 0 0 white, inset -7px 0 0 #dbdbdb, inset -8px 0 0 white,
-    inset -9px 0 0 #dbdbdb;
-}
+        .book-cover .book-image {
+            line-height: 0;
+            position: relative;
+            border-radius: 2px 6px 6px 2px;
+            box-shadow: 6px 6px 18px -2px rgba(0, 0, 0, 0.2),
+                24px 28px 40px -6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            transform: perspective(2000px) rotateY(-15deg) translateX(-10px) scaleX(0.94);
+            cursor: pointer;
+        }
 
-.book-cover .book-image {
-  line-height: 0;
-  position: relative;
-  border-radius: 2px 6px 6px 2px;
-  box-shadow: 6px 6px 18px -2px rgba(0, 0, 0, 0.2),
-    24px 28px 40px -6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  transform: perspective(2000px) rotateY(-15deg) translateX(-10px) scaleX(0.94);
-  cursor: pointer;
-}
+        .book-image img {
+            grid-row: 1 / -1;
+            grid-column: 1;
+            width: 100%;
+            border-radius: 2px 6px 6px 2px;
+        }
 
-.book-image img {
-  grid-row: 1 / -1;
-  grid-column: 1;
-  width: 100%;
-  border-radius: 2px 6px 6px 2px;
-}
+        .book:hover .book-image {
+            transform: perspective(2000px) rotateY(0deg) translateX(0px) scaleX(1);
+            transform-style: preserve-3d;
+            box-shadow: 6px 6px 12px -1px rgba(0, 0, 0, 0.1),
+                20px 14px 16px -6px rgba(0, 0, 0, 0.1);
+        }
 
-.book:hover .book-image {
-  transform: perspective(2000px) rotateY(0deg) translateX(0px) scaleX(1);
-  transform-style: preserve-3d;
-  box-shadow: 6px 6px 12px -1px rgba(0, 0, 0, 0.1),
-    20px 14px 16px -6px rgba(0, 0, 0, 0.1);
-}
+        .effect {
+            position: absolute;
+            width: 20px;
+            height: 100%;
+            margin-left: 16px;
+            top: 0;
+            border-left: 2px solid #00000010;
+            background-image: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0) 100%);
+            transition: all 0.5s ease;
+            z-index: 5;
+        }
 
-.effect {
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  margin-left: 16px;
-  top: 0;
-  border-left: 2px solid #00000010;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transition: all 0.5s ease;
-  z-index: 5;
-}
+        .light {
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            border-radius: 3px;
+            background-image: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.2) 100%);
+            top: 0;
+            right: 0;
+            opacity: 0.1;
+            transition: all 0.5s ease;
+            z-index: 4;
+        }
 
-.light {
-  width: 90%;
-  height: 100%;
-  position: absolute;
-  border-radius: 3px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  top: 0;
-  right: 0;
-  opacity: 0.1;
-  transition: all 0.5s ease;
-  z-index: 4;
-}
-
-.book-image:hover .effect{
-    margin-left: 14px;
-}
-        </style>
+        .book-image:hover .effect {
+            margin-left: 14px;
+        }
+    </style>
 </head>
+
 <body style="padding-right: 0px !important;">
     <header class="row">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -138,20 +135,21 @@
         <div class="book col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="d-flex justify-content-between">
                 <div class="desc">
-                    <h2>Srimad Bhagabad Gita</h2>
+                    <h2>Srimad Bhagavad Gita</h2>
                     <p>It is an ancient Hindu scripture that is part of the epic poem Mahabharata.</p>
-                    <a href="./ebooks/gita.html" class="btn btn-warning">Read</a> 
+                    <a href="./ebooks/gita.html" class="btn btn-warning">Read</a>
                 </div>
                 <div>
                     <div class="book-items">
                         <div class="main-book-wrap">
-                          <div class="book-cover">
-                            <div class="book-inside"></div>
-                            <div class="book-image">
-                                <img src="https://www.goldenagemedia.org/wp-content/uploads/2023/04/Srimad-Bhagavad-Gita-English-front-image-jpg-1.webp" />
-                                <div class="effect"></div>
-                            <div class="light"></div>
-                            </div>
+                            <div class="book-cover">
+                                <div class="book-inside"></div>
+                                <div class="book-image">
+                                    <img
+                                        src="https://www.goldenagemedia.org/wp-content/uploads/2023/04/Srimad-Bhagavad-Gita-English-front-image-jpg-1.webp" />
+                                    <div class="effect"></div>
+                                    <div class="light"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,18 +161,19 @@
                 <div>
                     <h2>Rama Rakhya Stotram</h2>
                     <p>It focuses on all parts of the body and invokes Lord Ram to protect them.</p>
-                    <a href="./ebooks/ramaRakhyaStotra.html" class="btn" style="background-color: #078fc7;color: white;">Read</a>
+                    <a href="./ebooks/ramaRakhyaStotra.html" class="btn"
+                        style="background-color: #078fc7;color: white;">Read</a>
                 </div>
                 <div>
                     <div class="book-items">
                         <div class="main-book-wrap">
-                          <div class="book-cover">
-                            <div class="book-inside"></div>
-                            <div class="book-image">
-                                <img src="./images/rama_rakhya.jpg" />
-                                <div class="effect"></div>
-                            <div class="light"></div>
-                            </div>
+                            <div class="book-cover">
+                                <div class="book-inside"></div>
+                                <div class="book-image">
+                                    <img src="./images/rama_rakhya.jpg" />
+                                    <div class="effect"></div>
+                                    <div class="light"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -186,18 +185,19 @@
                 <div>
                     <h2>Manabasa Laxmipurana</h2>
                     <p>Upholding Equality and Love Transcends Caste Divisions in World.</p>
-                    <a href="./ebooks/manabasa_laxmi_purana.html" class="btn btn-danger" style="background-color: #ff4d3b;">Read</a>
+                    <a href="./ebooks/manabasa_laxmi_purana.html" class="btn btn-danger"
+                        style="background-color: #ff4d3b;">Read</a>
                 </div>
                 <div>
                     <div class="book-items">
                         <div class="main-book-wrap">
-                          <div class="book-cover">
-                            <div class="book-inside"></div>
-                            <div class="book-image">
-                                <img src="./images/manabasa_gurubara.webp" />
-                                <div class="effect"></div>
-                            <div class="light"></div>
-                            </div>
+                            <div class="book-cover">
+                                <div class="book-inside"></div>
+                                <div class="book-image">
+                                    <img src="./images/manabasa_gurubara.webp" />
+                                    <div class="effect"></div>
+                                    <div class="light"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -209,19 +209,20 @@
                 <div>
                     <h2>Chhamana Athaguntha</h2>
                     <p>a tale of wealth and greed, of property and theft.</p>
-                    <a href="./ebooks/chhaManaAthaGuntha.html" class="btn btn-warning" style="background-color: #daa75b;">Read</a>
-                    
+                    <a href="./ebooks/chhaManaAthaGuntha.html" class="btn btn-warning"
+                        style="background-color: #daa75b;">Read</a>
+
                 </div>
                 <div>
                     <div class="book-items">
                         <div class="main-book-wrap">
-                          <div class="book-cover">
-                            <div class="book-inside"></div>
-                            <div class="book-image">
-                                <img src="./images/Chhamana-Athaguntha.jpg" />
-                                <div class="effect"></div>
-                            <div class="light"></div>
-                            </div>
+                            <div class="book-cover">
+                                <div class="book-inside"></div>
+                                <div class="book-image">
+                                    <img src="./images/Chhamana-Athaguntha.jpg" />
+                                    <div class="effect"></div>
+                                    <div class="light"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -230,17 +231,20 @@
         </div>
     </section>
     <script>
-        document.getElementById('enter-button').addEventListener('click', function() {
-    const passwordInput = document.getElementById('password-input').value;
-    const correctPassword = '12345678';
+        document.getElementById('enter-button').addEventListener('click', function () {
+            const passwordInput = document.getElementById('password-input').value;
+            const correctPassword = '12345678';
 
-    if (passwordInput === correctPassword) {
-        document.querySelector('.collections').style.display = 'flex';
-        document.querySelector('.personal-security').style.display = 'none';
-    } else {
-        alert('Incorrect password. Please try again.');
-    }
-});
+            if (passwordInput === correctPassword) {
+                document.querySelector('.collections').style.display = 'flex';
+                document.querySelector('.personal-security').style.display = 'none';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                alert('Incorrect password. Please try again.');
+                document.getElementById('password-input').value = '';
+            }
+        });
     </script>
 </body>
+
 </html>
