@@ -238,7 +238,7 @@
             if (passwordInput === correctPassword) {
                 document.querySelector('.collections').style.display = 'flex';
                 document.querySelector('.personal-security').style.display = 'none';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                document.documentElement.scrollTop = 0;
             } else {
                 alert('Incorrect password. Please try again.');
                 document.getElementById('password-input').value = '';

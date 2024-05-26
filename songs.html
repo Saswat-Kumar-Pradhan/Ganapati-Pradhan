@@ -144,6 +144,7 @@
 
                 if (password === correctPassword) {
                     document.getElementById('password-input').value = '';
+                    $('#passwordModal').modal('hide');
                     window.location.href = targetHref;
                 } else {
                     alert('Incorrect password');
