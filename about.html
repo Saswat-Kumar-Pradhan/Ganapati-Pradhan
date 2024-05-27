@@ -115,10 +115,7 @@
         }
         .dd{
             width: calc(100%-15px);
-            height: 80px;
             margin: 30px auto 20px 15px;
-            border-radius: 10px;
-            background-color: #dfdfdf;
         }
 
 
@@ -257,12 +254,27 @@
     </section>
     <section>
         <h4 class="text-center">Developer Details</h4>
+        <div class="text-center">
+            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+        </div>
+          
         <div class="dd">
-
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body text-center">
+                  <h5>Saswat Kumar Pradhan</h5>
+                  <a href="https://saswatkumar.com">saswatkumar.com</a>
+                </div>
+              </div>
         </div>
     </section>
     <div class="copyright">&copy; Ganapati Pradhan</div>
     <script src="./touchAndHold.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
