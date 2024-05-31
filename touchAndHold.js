@@ -29,7 +29,7 @@ touchElement.addEventListener('touchstart', function (event) {
 touchElement.addEventListener('touchend', function (event) {
     clearTimer();
     if (!isLongPress) {
-        redirectTo('./click.html');
+        redirectTo('./contact.html');
     }
 });
 
@@ -46,7 +46,7 @@ touchElement.addEventListener('mousedown', function (event) {
 touchElement.addEventListener('mouseup', function (event) {
     clearTimer();
     if (!isLongPress) {
-        redirectTo('./click.html');
+        redirectTo('./contact.html');
     }
 });
 
