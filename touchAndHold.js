@@ -1,32 +1,55 @@
 const touchElement = document.getElementById('touchElement');
 let touchTimer;
+let isLongPress = false;
 
+// Function to handle redirection
+function redirectTo(url) {
+    window.location.href = url;
+}
+
+// Common event handlers for touch and mouse
+function startTimer(url) {
+    touchTimer = setTimeout(() => {
+        isLongPress = true;
+        redirectTo(url);
+    }, 2000);
+}
+
+function clearTimer() {
+    clearTimeout(touchTimer);
+}
+
+// Touch events
 touchElement.addEventListener('touchstart', function (event) {
     event.preventDefault();
-    touchTimer = setTimeout(() => {
-        window.location.href = './personal.html';
-    }, 2000);
+    isLongPress = false;
+    startTimer('./personal.html');
 });
 
 touchElement.addEventListener('touchend', function (event) {
-    clearTimeout(touchTimer);
+    clearTimer();
+    if (!isLongPress) {
+        redirectTo('./click.html');
+    }
 });
 
 touchElement.addEventListener('touchmove', function (event) {
-    clearTimeout(touchTimer);
+    clearTimer();
 });
 
-// For mouse support
+// Mouse events
 touchElement.addEventListener('mousedown', function (event) {
-    touchTimer = setTimeout(() => {
-        window.location.href = './personal.html';
-    }, 2000);
+    isLongPress = false;
+    startTimer('./personal.html');
 });
 
 touchElement.addEventListener('mouseup', function (event) {
-    clearTimeout(touchTimer);
+    clearTimer();
+    if (!isLongPress) {
+        redirectTo('./click.html');
+    }
 });
 
 touchElement.addEventListener('mousemove', function (event) {
-    clearTimeout(touchTimer);
+    clearTimer();
 });
