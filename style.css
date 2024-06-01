@@ -422,7 +422,7 @@ iframe {
         font-size: smaller;
     }
     .book{
-        padding: 0px 100px;
+        padding: 0px 60px !important;
         a{
             width: 120px;
         }
@@ -544,7 +544,7 @@ iframe {
             margin-top: 20px;
         }
         .book{
-            padding: 0px 0px;
+            padding: 0px 0px !important;
         }
     }
 }

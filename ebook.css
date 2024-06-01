@@ -1,5 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.4s;
 }
 .thumbnail{
     text-align: center;
@@ -42,6 +43,7 @@ body{
     padding: 70px 20px 20px;
     /* text-align: justify; */
     font-weight: bold;
+    width: max-content;
 }
 .accordion-body, .accordion-button{
     font-weight: bold;

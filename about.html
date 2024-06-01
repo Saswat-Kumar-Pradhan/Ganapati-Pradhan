@@ -166,6 +166,13 @@
                 }
             }
         }
+        .fa-arrow-down {
+            transition: transform 0.5s;
+        }
+
+        .rotated {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 
@@ -294,6 +301,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            var icon = $('.fa-arrow-down');
+        
+            $('#collapseExample').on('show.bs.collapse', function () {
+                icon.addClass('rotated');
+            });
+        
+            $('#collapseExample').on('hide.bs.collapse', function () {
+                icon.removeClass('rotated');
+            });
+        
+            $('#collapseExample').on('shown.bs.collapse', function () {
+                this.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        </script>
 </body>
 
 </html>
