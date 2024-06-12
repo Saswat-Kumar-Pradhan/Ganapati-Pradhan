@@ -5,6 +5,30 @@ body {
     overflow-x: hidden;
     padding-right: 15px !important;
 }
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(royalblue, red, green, royalblue);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(red, green, royalblue, red);
+}
+
+/* For Firefox */
+/* * {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+} */
+
 
 a {
     text-decoration: none !important;
@@ -98,19 +122,19 @@ header {
 }
 
 .ssongs-container .col-6:nth-child(1) .box2 {
-    background-image: url(images/khaiba_agaru.png);
+    background-image: url(images/khaiba_agaru.webp);
 }
 
 .ssongs-container .col-6:nth-child(2) .box2 {
-    background-image: url(images/nada\ achara.png);
+    background-image: url(images/nada\ achara.webp);
 }
 
 .ssongs-container .col-6:nth-child(3) .box2 {
-    background-image: url(images/urea\ nada.png);
+    background-image: url(images/urea\ nada.webp);
 }
 
 .ssongs-container .col-6:nth-child(4) .box2 {
-    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.png);
+    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.webp);
 }
 
 .blog-heading {
