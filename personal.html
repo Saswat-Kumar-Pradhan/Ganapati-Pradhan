@@ -256,6 +256,12 @@
         </div>
     </section>
     <script>
+        document.getElementById('password-input').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();  // Prevent form submission if it's in a form
+                document.getElementById('enter-button').click();
+            }
+        });
         document.getElementById('enter-button').addEventListener('click', function () {
             const passwordInput = document.getElementById('password-input').value;
             const correctPassword = '12345678';
