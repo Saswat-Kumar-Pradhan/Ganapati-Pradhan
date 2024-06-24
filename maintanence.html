@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganapati Pradhan</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body{
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #fbfbfb;
         }
-        img{
+        video{
             width: 570px;
             margin-top: 30px;
         }
@@ -26,11 +27,19 @@
             text-decoration: none;
             color: white;
             background-color: blue;
-            padding: 8px 12px;
+            padding: 8px 14px;
             border-radius: 5px;
+            font-weight: bold;
+        }
+        i{
+            margin-right: 6px;
+            transition: all 0.5s;
+        }
+        a:hover i{
+            rotate: 360deg;
         }
         @media (max-width: 700px) {
-            img{
+            video{
                 width: 70vw;
                 margin-top: 170px;
             } 
@@ -41,10 +50,11 @@
     </style>
 </head>
 <body>
-    <img src="./images/web_maintanence.gif" alt="">
+    <!-- <img src="./images/web_maintanence.gif" alt=""> -->
+    <video src="./images/web_maintanence.webm" autoplay muted loop></video>
     <h1>MAINTANENCE BREAK</h1>
     <p>We are currently updating the website to enhance your experience. We apologize for any inconvenience this may cause.</p>
     <h3>We'll be back online shortly!</h3>
-    <a href="./index.html">&#8635; Refresh</a>
+    <a href="./index.html"><i class="fa-solid fa-rotate-right"></i> Refresh</a>
 </body>
 </html>

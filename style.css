@@ -447,6 +447,13 @@ iframe {
         padding: 0px 60px !important;
         a{
             width: 120px;
+            color: white;
+        }
+        a i{
+            transition: all 0.3s;
+        }
+        a:hover i{
+            scale: 1.2;
         }
         .desc{
             padding-right: 20px;
@@ -548,7 +555,7 @@ iframe {
     }
     .personal-security{
         text-align: center;
-        img{
+        video{
             width: 200px;
             margin: 200px auto 20px;
         }
