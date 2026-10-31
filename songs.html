@@ -75,47 +75,30 @@
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./commingsoon.html" class="protected-link"><img src="./images/ame_sabu_kuni....webp"
+                    <a href="./commingsoon.html"><img src="./images/ame_sabu_kuni....webp"
                             alt=""></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./commingsoon.html" class="protected-link"><img src="./images/paika_neta.webp" alt=""></a>
+                    <a href="./commingsoon.html"><img src="./images/paika_neta.webp" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./commingsoon.html" class="protected-link"><img src="./images/bharat_mata_ki_jay.webp"
+                    <a href="./commingsoon.html"><img src="./images/bharat_mata_ki_jay.webp"
                             alt=""></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-6">
                 <div class="box3">
-                    <a href="./commingsoon.html" class="protected-link"><img src="./images/jalianawala_bag.webp" alt=""></a>
+                    <a href="./commingsoon.html"><img src="./images/jalianawala_bag.webp" alt=""></a>
                 </div>
             </div>
         </div>
     </section>
     <br><br><br>
     <div class="copyright">&copy; Ganapati Pradhan</div>
-
-    <!-- Password Modal -->
-    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h3 class="modal-title text-center" id="passwordModalLabel">Enter Password</h3><br>
-                    <input type="password" id="password-input" class="form-control" placeholder="Password">
-                    <div class="popup">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="submit-password">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -127,37 +110,6 @@
                     sound.currentTime = 0; // Rewind to the start
                     sound.play();
                 });
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var protectedLinks = document.querySelectorAll('.protected-link');
-            var targetHref = '';
-
-            protectedLinks.forEach(function (link) {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault(); // Prevent the default action
-                    targetHref = link.getAttribute('href'); // Store the target URL
-                    $('#passwordModal').modal('show'); // Show the modal
-                });
-            });
-
-            document.getElementById('submit-password').addEventListener('click', function () {
-                var password = document.getElementById('password-input').value;
-                var correctPassword = '123456';
-
-                if (password === correctPassword) {
-                    document.getElementById('password-input').value = '';
-                    $('#passwordModal').modal('hide');
-                    window.location.href = targetHref;
-                } else {
-                    alert('Incorrect password');
-                    document.getElementById('password-input').value = '';
-                }
-            });
-            document.getElementById('close-modal').addEventListener('click', function () {
-                $('#passwordModal').modal('hide');
             });
         });
     </script>

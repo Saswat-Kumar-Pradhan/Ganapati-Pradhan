@@ -62,6 +62,9 @@
             grid-row: 1 / -1;
             grid-column: 1;
             width: 100%;
+            height: 192px;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
             border-radius: 2px 6px 6px 2px;
         }
 
@@ -128,15 +131,7 @@
             </div>
         </div>
     </header>
-    <section>
-        <div class="personal-security">
-            <video src="./images/lock.webm" muted loop autoplay></video>
-            <h3 class="modal-title text-center" id="passwordModalLabel">Enter Security Key</h3><br>
-            <center><input type="password" id="password-input" class="form-control" placeholder="key"></center>
-            <button class="btn btn-primary" id="enter-button">Enter</button>
-        </div>
-    </section>
-    <section class="collections row" style="display: none;">
+    <section class="collections row">
         <div class="book col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="d-flex justify-content-between">
                 <div class="desc">
@@ -151,7 +146,7 @@
                                 <div class="book-inside"></div>
                                 <div class="book-image">
                                     <img
-                                        src="https://www.goldenagemedia.org/wp-content/uploads/2023/04/Srimad-Bhagavad-Gita-English-front-image-jpg-1.webp" />
+                                        src="https://www.mlbd.in/cdn/shop/files/9371005491.MAIN.jpg?v=1780723079&width=778" />
                                     <div class="effect"></div>
                                     <div class="light"></div>
                                 </div>
@@ -176,6 +171,31 @@
                                 <div class="book-inside"></div>
                                 <div class="book-image">
                                     <img src="./images/rama_rakhya.jpg" />
+                                    <div class="effect"></div>
+                                    <div class="light"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="book col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h2>Shree Ramastakam</h2>
+                    <p>A sacred eight-verse devotional hymn celebrating the virtues and divine glory of Lord Rama.</p>
+                    <a href="./ebooks/ramastakam.html" class="btn"
+                        style="background-color: #7b2cbf;"><i class="fa-solid fa-book-open"></i>&nbsp;&nbsp; Read</a>
+
+                </div>
+                <div>
+                    <div class="book-items">
+                        <div class="main-book-wrap">
+                            <div class="book-cover">
+                                <div class="book-inside"></div>
+                                <div class="book-image">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaVvzjG6u8wa73tcmFMOjBP4526meoVFaGR2-F2qIOVw&s=10" />
                                     <div class="effect"></div>
                                     <div class="light"></div>
                                 </div>
@@ -285,27 +305,6 @@
             </div>
         </div>
     </section>
-    <script>
-        document.getElementById('password-input').addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault();  // Prevent form submission if it's in a form
-                document.getElementById('enter-button').click();
-            }
-        });
-        document.getElementById('enter-button').addEventListener('click', function () {
-            const passwordInput = document.getElementById('password-input').value;
-            const correctPassword = '12345678';
-
-            if (passwordInput === correctPassword) {
-                document.querySelector('.collections').style.display = 'flex';
-                document.querySelector('.personal-security').style.display = 'none';
-                document.documentElement.scrollTop = 0;
-            } else {
-                alert('Incorrect password. Please try again.');
-                document.getElementById('password-input').value = '';
-            }
-        });
-    </script>
 </body>
 
 </html>

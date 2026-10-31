@@ -19,16 +19,21 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background-image: linear-gradient(red, green, royalblue, red);
 }
-.thumbnail{
+.thumbnail {
     text-align: center;
-    img{
-        width: 250px;
-        margin: 65px auto 30px;
-        border-radius: 10px;
-        box-shadow: 8px 2px 30px rgb(105, 105, 105);
-    }
 }
-.heading{
+
+.thumbnail img {
+    width: 250px;
+    height: 375px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    margin: 65px auto 30px;
+    border-radius: 10px;
+    box-shadow: 8px 2px 30px rgb(105, 105, 105);
+}
+
+.heading {
     position: sticky;
     top: 0;
     text-align: center;
@@ -36,25 +41,29 @@ body{
     /* background: rgba(255, 255, 255, 0.7); */
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    h2{
-        margin: 0;
-    }
-    p{
-        margin: 10px 0 13px;
-        color: gray;
-    }
-    .modes button{
-        border-radius: 50%;
-        width: 35px;
-        height: 35px;
-        margin: auto 5px;
-        background-color: white;
-        border: 1px solid black;
-        transition: all 0.2s;
-    }
-    .modes button:hover{
-        filter: invert(1);
-    }
+}
+
+.heading h2 {
+    margin: 0;
+}
+
+.heading p {
+    margin: 10px 0 13px;
+    color: gray;
+}
+
+.heading .modes button {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin: auto 5px;
+    background-color: white;
+    border: 1px solid black;
+    transition: all 0.2s;
+}
+
+.heading .modes button:hover {
+    filter: invert(1);
 }
 .content{
     padding: 70px 20px 20px;

@@ -20,36 +20,38 @@ function clearTimer() {
 }
 
 // Touch events
-touchElement.addEventListener('touchstart', function (event) {
-    event.preventDefault();
-    isLongPress = false;
-    startTimer('./personal.html');
-});
+if (touchElement) {
+    touchElement.addEventListener('touchstart', function (event) {
+        event.preventDefault();
+        isLongPress = false;
+        startTimer('./personal.html');
+    });
 
-touchElement.addEventListener('touchend', function (event) {
-    clearTimer();
-    if (!isLongPress) {
-        redirectTo('./contact.html');
-    }
-});
+    touchElement.addEventListener('touchend', function (event) {
+        clearTimer();
+        if (!isLongPress) {
+            redirectTo('./contact.html');
+        }
+    });
 
-touchElement.addEventListener('touchmove', function (event) {
-    clearTimer();
-});
+    touchElement.addEventListener('touchmove', function (event) {
+        clearTimer();
+    });
 
-// Mouse events
-touchElement.addEventListener('mousedown', function (event) {
-    isLongPress = false;
-    startTimer('./personal.html');
-});
+    // Mouse events
+    touchElement.addEventListener('mousedown', function (event) {
+        isLongPress = false;
+        startTimer('./personal.html');
+    });
 
-touchElement.addEventListener('mouseup', function (event) {
-    clearTimer();
-    if (!isLongPress) {
-        redirectTo('./contact.html');
-    }
-});
+    touchElement.addEventListener('mouseup', function (event) {
+        clearTimer();
+        if (!isLongPress) {
+            redirectTo('./contact.html');
+        }
+    });
 
-touchElement.addEventListener('mousemove', function (event) {
-    clearTimer();
-});
+    touchElement.addEventListener('mousemove', function (event) {
+        clearTimer();
+    });
+}

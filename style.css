@@ -459,6 +459,35 @@ iframe {
             padding-right: 20px;
         }
     }
+    .book-image img {
+        width: 100%;
+        height: 192px;
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+    }
+}
+
+.collection-section-container {
+    padding: 10px 80px 40px;
+}
+
+.collection-text-col p {
+    font-size: 17px;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 540px;
+}
+
+.collection-illus-col svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 260px;
+    transition: transform 0.3s ease;
+}
+
+.collection-illus-col:hover svg {
+    transform: scale(1.04);
 }
 
 @media (max-width: 768px) {
@@ -575,5 +604,15 @@ iframe {
         .book{
             padding: 0px 0px !important;
         }
+    }
+    .collection-section-container {
+        padding: 35px 20px 30px;
+        text-align: center;
+    }
+    .collection-text-col p {
+        margin: 0 auto 25px;
+    }
+    .collection-illus-col {
+        margin-top: 25px;
     }
 }
