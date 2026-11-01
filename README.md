@@ -21,7 +21,7 @@ Thank you for visiting the official website repository of Ganapati Pradhan!
 
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="https://ganapatipradhan.vercel.app/images/macbook-pro.webp" alt="Ganapati Pradhan's Website" height="250px" />
-  <img src="https://ganapatipradhan.vercel.app/images/iphone-15.webp" alt="Ganapati Pradhan's Website" height="250px" />
-  <img src="https://ganapatipradhan.vercel.app/images/ipad.webp" alt="Ganapati Pradhan's Website" height="250px" />
+  <img src="https://ganapatipradhan.vercel.app/images/ui/macbook-pro.webp" alt="Ganapati Pradhan's Website" height="250px" />
+  <img src="https://ganapatipradhan.vercel.app/images/ui/iphone-15.webp" alt="Ganapati Pradhan's Website" height="250px" />
+  <img src="https://ganapatipradhan.vercel.app/images/ui/ipad.webp" alt="Ganapati Pradhan's Website" height="250px" />
 </div>

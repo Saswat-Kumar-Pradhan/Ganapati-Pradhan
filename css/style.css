@@ -91,7 +91,7 @@ header {
 }
 
 .box1 {
-    background-image: url(images/hanuman\ chalisa\ banner.png);
+    background-image: url(../images/books/hanuman\ chalisa\ banner.png);
     background-size: cover;
     margin: 50px 50px 20px 80px;
     aspect-ratio: 1.9;
@@ -122,19 +122,19 @@ header {
 }
 
 .ssongs-container .col-6:nth-child(1) .box2 {
-    background-image: url(images/khaiba_agaru.webp);
+    background-image: url(../images/songs/khaiba_agaru.webp);
 }
 
 .ssongs-container .col-6:nth-child(2) .box2 {
-    background-image: url(images/nada\ achara.webp);
+    background-image: url(../images/songs/nada\ achara.webp);
 }
 
 .ssongs-container .col-6:nth-child(3) .box2 {
-    background-image: url(images/urea\ nada.webp);
+    background-image: url(../images/songs/urea\ nada.webp);
 }
 
 .ssongs-container .col-6:nth-child(4) .box2 {
-    background-image: url(images/gaiku\ kamadhenu\ kariba\ asa.webp);
+    background-image: url(../images/songs/gaiku\ kamadhenu\ kariba\ asa.webp);
 }
 
 .blog-heading {
@@ -237,6 +237,8 @@ iframe {
     img {
         width: 90%;
         border-radius: 10px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+        transition: all 0.25s ease;
     }
 
     h3 {
@@ -259,7 +261,20 @@ iframe {
     .box3:hover {
         transform: translateY(-10px);
         scale: 1.05;
+
+        img {
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+        }
     }
+}
+
+.awareness-song .box3 img {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    transition: all 0.25s ease;
+}
+
+.awareness-song .box3:hover img {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
 }
 
 #passwordModalLabel {
@@ -467,27 +482,146 @@ iframe {
     }
 }
 
-.collection-section-container {
-    padding: 10px 80px 40px;
+/* Stack View for Collections */
+.stack-view-container {
+    padding: 20px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.collection-text-col p {
-    font-size: 17px;
-    color: #4b5563;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    max-width: 540px;
+.card-stack {
+    position: relative;
+    width: 210px;
+    height: 330px;
+    margin: 35px auto 10px;
+    cursor: pointer;
+    perspective: 1200px;
 }
 
-.collection-illus-col svg {
-    max-width: 100%;
-    height: auto;
-    max-height: 260px;
-    transition: transform 0.3s ease;
+.stack-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+    transition: all 0.35s cubic-bezier(0.34, 1.25, 0.64, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.collection-illus-col:hover svg {
-    transform: scale(1.04);
+.stack-card img {
+    width: 100%;
+    height: calc(100% - 50px);
+    object-fit: cover;
+    display: block;
+}
+
+.card-label {
+    padding: 6px 10px;
+    background: #ffffff;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-label h5 {
+    font-size: 13px;
+    font-weight: bold !important;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #212529;
+}
+
+.card-label span {
+    font-size: 11px;
+    color: #6c757d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Layered positions: one above one */
+.stack-card.pos-0 {
+    z-index: 5;
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 1;
+}
+
+.stack-card.pos-1 {
+    z-index: 4;
+    transform: translateY(-14px) scale(0.95) rotate(-3.5deg);
+    opacity: 0.95;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+.stack-card.pos-2 {
+    z-index: 3;
+    transform: translateY(-28px) scale(0.90) rotate(3deg);
+    opacity: 0.9;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stack-card.pos-3 {
+    z-index: 2;
+    transform: translateY(-42px) scale(0.85) rotate(-5.5deg);
+    opacity: 0.85;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stack-card.pos-4 {
+    z-index: 1;
+    transform: translateY(-56px) scale(0.80) rotate(4deg);
+    opacity: 0.8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover: fan out deck smoothly */
+.card-stack:hover .stack-card.pos-0 {
+    transform: translateY(12px) scale(1.02);
+}
+
+.card-stack:hover .stack-card.pos-1 {
+    transform: translateX(-45px) translateY(-8px) scale(0.96) rotate(-8deg);
+}
+
+.card-stack:hover .stack-card.pos-2 {
+    transform: translateX(45px) translateY(-8px) scale(0.96) rotate(8deg);
+}
+
+.card-stack:hover .stack-card.pos-3 {
+    transform: translateX(-85px) translateY(-18px) scale(0.91) rotate(-14deg);
+}
+
+.card-stack:hover .stack-card.pos-4 {
+    transform: translateX(85px) translateY(-18px) scale(0.91) rotate(14deg);
+}
+
+/* Slide out animation when clicked */
+.stack-card.sliding-out {
+    transform: translateX(140px) translateY(-30px) rotate(18deg) scale(0.88) !important;
+    opacity: 0.2 !important;
+    transition: all 0.24s ease-out !important;
+    z-index: 6 !important;
+}
+
+.stack-hint {
+    color: #6c757d;
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -605,14 +739,29 @@ iframe {
             padding: 0px 0px !important;
         }
     }
-    .collection-section-container {
-        padding: 35px 20px 30px;
-        text-align: center;
+    .stack-view-container {
+        padding: 35px 15px 10px;
     }
-    .collection-text-col p {
-        margin: 0 auto 25px;
+
+    .card-stack {
+        width: 190px;
+        height: 300px;
+        margin: 25px auto 10px;
     }
-    .collection-illus-col {
-        margin-top: 25px;
+
+    .card-stack:hover .stack-card.pos-1 {
+        transform: translateX(-30px) translateY(-6px) scale(0.96) rotate(-6deg);
+    }
+
+    .card-stack:hover .stack-card.pos-2 {
+        transform: translateX(30px) translateY(-6px) scale(0.96) rotate(6deg);
+    }
+
+    .card-stack:hover .stack-card.pos-3 {
+        transform: translateX(-55px) translateY(-14px) scale(0.91) rotate(-10deg);
+    }
+
+    .card-stack:hover .stack-card.pos-4 {
+        transform: translateX(55px) translateY(-14px) scale(0.91) rotate(10deg);
     }
 }
